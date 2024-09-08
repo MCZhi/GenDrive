@@ -195,12 +195,40 @@
   </div>  -->
 </section>
 
-
 <section class="section">
   <div class="container is-max-desktop">
-
+    <!-- System Pipeline. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Model Structure</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/GenDrive.png" alt="Closed Loop Process" style="width: 90%;">
+          <!-- <p><i>Closed-loop process for ThinkGrasp.</i></p> -->
+          <p>
+            Our system uses an iterative pipeline for grasping in cluttered environments. Given an initial RGB-D scene observation ($224{\times}224$ for simulation, $640{\times}480$ for real robot) and a natural language instruction:
+          </p>
+          <p>
+            First, <b>GPT-4o</b> performs "<b>imagine segmentation</b>", analyzing the scene and instruction to identify potential target objects or parts. GPT-4o suggests grasp locations by proposing specific points within a $3{\times}3$ grid, focusing on the safest and most advantageous parts for grasping.
+          </p>
+          <p>
+            The system then uses either <b>LangSAM</b> or <b>VLPart</b> for segmentation, based on whether the target is an object or a part. GPT-4o adjusts its selections based on new visual input after each grasp, updating predictions for the target object and preferred grasping location.
+          </p>
+          <p>
+            To determine the optimal grasping pose, the system generates candidate poses from the cropped point cloud. We used <b>Graspnet-1Billion</b> for simulations and <b>FGC-Graspnet</b> for real-robot tests to ensure consistent results. The candidate poses are evaluated based on proximity to the preferred location and grasp quality scores.
+          </p>
+          <p>
+            This closed-loop process allows the system to adapt its strategy based on updated observations after each grasp attempt, effectively managing heavy clutter until the task is completed or the maximum number of iterations is reached.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+<section class="section">
+  <div class="container is-max-desktop">
     <div class="columns is-centered">
-
+      <h2 class="title is-3">Closed-loop Simulation Results</h2>
       <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
