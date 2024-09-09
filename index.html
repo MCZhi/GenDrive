@@ -223,10 +223,22 @@
   
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered">
+    <div class="columns is-centered">  
       <h2 class="title is-3">Closed-loop Simulation Results</h2>
-      
-      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h3 class="title is-4">Single-Sample Planning</h3>
+          <p>
+            The single-sample planning method is a traditional prediction-planning approach that generates a single future scene and evaluates it with a human-designed reward.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/dollyzoom-stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- Comparision 1. -->
       <div class="column">
         <div class="content">
           <h3 class="title is-4">Visual Effects</h3>
@@ -240,9 +252,8 @@
           </video>
         </div>
       </div>
-      <!--/ Visual Effects. -->
 
-      <!-- Matting. -->
+      <!-- Comparision 1 -->
       <div class="column">
         <h3 class="title is-4">Matting</h3>
         <div class="columns is-centered">
@@ -260,7 +271,6 @@
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
 
     <!-- Animation. -->
     <div class="columns is-centered">
