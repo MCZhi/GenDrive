@@ -223,49 +223,40 @@
   
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column">
-        <h2 class="title is-3">Results</h2>
-        <div class="content has-text-justified">
-          <p>
-            We evaluate the performance of the Gen-Drive framework on the nuPlan dataset, which contains 1,000 scenes with 10,000 interactions. 
-            The dataset is split into 800 training scenes and 200 testing scenes. 
-            We compare the performance of Gen-Drive with other learning-based methods and the single-sample planning method.
-          </p>
-        </div>
-      </div>
+    <div class="columns is-centered has-text-centered"></div>
+      <h2 class="title is-3">Closed-loop Simulation Results</h2>
 
-    <div class="columns is-centered">  
-      <div class="column">
-        <div class="content">
-          <h3 class="title is-4">Single-Sample Planning</h3>
-          <p>
-            The single-sample planning method is a traditional prediction-planning approach that generates a single future scene and evaluates it with a human-designed reward.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <div class="column">
-        <h3 class="title is-4">Matting</h3>
-        <div class="columns is-centered">
-          <div class="column content">
+      <div class="columns is-centered">  
+        <div class="column">
+          <div class="content">
+            <h3 class="title is-4">Single-Sample Planning</h3>
             <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
+              The single-sample planning method is a traditional prediction-planning approach that generates a single future scene and evaluates it with a human-designed reward.
             </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/dollyzoom-stacked.mp4"
                       type="video/mp4">
             </video>
           </div>
+        </div>
 
+        <div class="column">
+          <h3 class="title is-4">Matting</h3>
+          <div class="columns is-centered">
+            <div class="column content">
+              <p>
+                As a byproduct of our method, we can also solve the matting problem by ignoring
+                samples that fall outside of a bounding box during rendering.
+              </p>
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./static/videos/matting.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+
+          </div>
         </div>
       </div>
-      
     </div>
 
     <!-- Animation. -->
