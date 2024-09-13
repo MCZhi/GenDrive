@@ -251,7 +251,7 @@
         <div class="content">
           <h3 class="title is-4">Single-Sample Planning</h3>
           <p>
-            The single-sample planning method is a traditional prediction-planning approach that generates a single future scene and evaluates it with a human-designed reward.
+            Single-sample planning often leads to suboptimal performance because of a lack of diversity and casual confusion.
           </p>
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/single/traversing_pickup_dropoff_Gen-Drive Planner_a5189e52ecf55b73.mp4"
@@ -265,8 +265,7 @@
         <div class="columns is-centered">
           <div class="column content">
             <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
+               Multiple samples improve the diversity of plans and scoring helps select the optimal one.
             </p>
             <video id="matting-video" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/multi/traversing_pickup_dropoff_Gen-Drive Planner_a5189e52ecf55b73.mp4"
@@ -282,9 +281,6 @@
       <div class="column has-text-centered">
         <div class="content">
           <h3 class="title is-4">Single-Sample Planning</h3>
-          <p>
-            Planning method B is an alternative approach to decision-making in autonomous systems.
-          </p>
           <video id="video1" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/single/waiting_for_pedestrian_to_cross_Gen-Drive Planner_f7da2c3fd6f05e84.mp4"
                     type="video/mp4">
@@ -296,9 +292,6 @@
         <h3 class="title is-4">Multi-Sample and Scoring</h3>
         <div class="columns is-centered">
           <div class="column content">
-            <p>
-              Rendering technique A enhances visual realism by applying adaptive shading and lighting methods.
-            </p>
             <video id="rendering-video" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/multi/waiting_for_pedestrian_to_cross_Gen-Drive Planner_f7da2c3fd6f05e84.mp4"
                       type="video/mp4">
