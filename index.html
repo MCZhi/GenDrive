@@ -251,7 +251,7 @@
         <div class="content">
           <h3 class="title is-4">Single-Sample Planning</h3>
           <p>
-            Single-sample planning often leads to suboptimal performance because of a lack of diversity and casual confusion.
+            Single-sample planning often results in suboptimal performance due to a lack of diversity in the plans.
           </p>
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/single/traversing_pickup_dropoff_Gen-Drive Planner_a5189e52ecf55b73.mp4"
@@ -265,7 +265,7 @@
         <div class="columns is-centered">
           <div class="column content">
             <p>
-               Multiple samples improve the diversity of plans and scoring helps select the optimal one.
+               Multiple-sample planning increases the diversity and the learned reward model helps make the right decision.
             </p>
             <video id="matting-video" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/multi/traversing_pickup_dropoff_Gen-Drive Planner_a5189e52ecf55b73.mp4"
@@ -307,7 +307,7 @@
         <div class="content">
           <h3 class="title is-4">Before Fine-tuning</h3>
           <p>
-            The multi-sample planning method generates several future scenes and evaluates them using a deep learning model for reward estimation.
+            The base diffusion driving policy can exhibit undesirable behaviors in certain scenarios due to the limitations inherent in imitation learning. 
           </p>
           <video id="multisample" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/multi/high_lateral_acceleration_Gen-Drive Planner_41d071d979345e7d.mp4"
@@ -321,7 +321,7 @@
         <div class="columns is-centered">
           <div class="column content">
             <p>
-              Dynamic scene prediction focuses on modeling interactions between multiple moving objects for more accurate predictions.
+              Fine-tuning the diffusion policy leads to substantial improvements in closed-loop planning in some challenging situations.
             </p>
             <video id="dynamic-scene" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/tuned/high_lateral_acceleration_Gen-Drive Planner_41d071d979345e7d.mp4"
@@ -337,9 +337,6 @@
       <div class="column has-text-centered">
         <div class="content">
           <h3 class="title is-4">Before Fine-tuning</h3>
-          <p>
-            The path planning optimization approach minimizes path costs by considering a wide range of environmental factors and obstacles.
-          </p>
           <video id="path-planning" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/multi/high_lateral_acceleration_Gen-Drive Planner_875e1631b9095dc9.mp4"
                     type="video/mp4">
@@ -351,9 +348,6 @@
         <h3 class="title is-4">After Fine-tuning</h3>
         <div class="columns is-centered">
           <div class="column content">
-            <p>
-              Advanced object detection identifies and tracks dynamic objects in real-time, enhancing safety and responsiveness in autonomous systems.
-            </p>
             <video id="object-detection" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/tuned/high_lateral_acceleration_Gen-Drive Planner_875e1631b9095dc9.mp4"
                       type="video/mp4">
@@ -368,9 +362,6 @@
       <div class="column has-text-centered">
         <div class="content">
           <h3 class="title is-4">Before Fine-tuning</h3>
-          <p>
-            Trajectory planning involves generating optimal paths for vehicles based on real-time sensor data.
-          </p>
           <video id="trajectory-planning" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/single/high_lateral_acceleration_Gen-Drive Planner_d9ec238b65cb5bda.mp4"
                     type="video/mp4">
@@ -382,9 +373,6 @@
         <h3 class="title is-4">After Fine-tuning</h3>
         <div class="columns is-centered">
           <div class="column content">
-            <p>
-              This system predicts potential collisions and adjusts the vehicle's path to avoid any imminent dangers.
-            </p>
             <video id="collision-avoidance" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/tuned/high_lateral_acceleration_Gen-Drive Planner_d9ec238b65cb5bda.mp4"
                       type="video/mp4">
