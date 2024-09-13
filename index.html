@@ -203,7 +203,6 @@
         <h2 class="title is-3">Model Structure</h2>
         <div class="content has-text-justified">
           <img src="./static/images/GenDriveModel.png" alt="Neural Network Structure of the Gen-Drive Model" style="width: 100%;">
-          <!-- <p><i>Closed-loop process for ThinkGrasp.</i></p> -->
           <p>
             The query-centric encoding Transformer encodes all scene elements in local coordinates while preserving relative information in attention calculations.
           </p>
@@ -211,10 +210,11 @@
             The diffusion denoise Transformer comprises multiple attention blocks that iteratively attend to noised object futures, future-scene, and ego-route interactions.
           </p>
           <p>
-            During diffusion generation,  different scenes can be produced in parallel and then be fed into the scene evaluation Transformer.
+            During diffusion generation, different scenes can be produced in parallel and then be fed into the scene evaluation Transformer.
           </p>
           <p>
             The evaluation model utilizes a Transformer encoder-decoder to fuse information from the future scene and map, and two MLP heads are used to reconstruct the ego plan and output a score for the scene/plan.
+          </p>
         </div>
       </div>
     </div>
@@ -226,21 +226,15 @@
     <!-- Reward Pipeline. -->
     <div class="columns is-centered has-text-centered">
       <div class="column">
-        <h2 class="title is-3">Pairwise Preference from AI-Feedback</h2>
+        <h2 class="title is-3">Pairwise Preference from AI Feedback</h2>
         <div class="content has-text-justified">
           <img src="./static/images/gpt_prompt.png" alt="Prompt to GPT-4o and its feedback" style="width: 100%;">
-          <!-- <p><i>Closed-loop process for ThinkGrasp.</i></p> -->
           <p>
-            The query-centric encoding Transformer encodes all scene elements in local coordinates while preserving relative information in attention calculations.
+            We conduct pairwise sampling of the generated scenarios from the base diffusion generator. We first compute discrepancies between the planned trajectories, and then check collisions and off-road to filter out obvious failure cases.
           </p>
           <p>
-            The diffusion denoise Transformer comprises multiple attention blocks that iteratively attend to noised object futures, future-scene, and ego-route interactions.
+            If these measures are insufficient for distinction, we utilize GPT-4o to provide a conclusive evaluation.
           </p>
-          <p>
-            During diffusion generation,  different scenes can be produced in parallel and then be fed into the scene evaluation Transformer.
-          </p>
-          <p>
-            The evaluation model utilizes a Transformer encoder-decoder to fuse information from the future scene and map, and two MLP heads are used to reconstruct the ego plan and output a score for the scene/plan.
         </div>
       </div>
     </div>
